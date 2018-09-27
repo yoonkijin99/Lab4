@@ -70,9 +70,57 @@ public class Colosseum {
      *         (Look, we can return objects too!)
      *         <p>
      *         Implement this function.
+     *
+     *
      */
+
+
     public static Pokemon buildPokemon() {
         Pokemon tempPokemon = new Pokemon();
+
+        System.out.println();
+
+        System.out.println("Input Pokemon stat");
+
+        int attack = myScan.nextInt();
+
+        while (attack >= MAX_HIT_POINTS || attack < 1) {
+
+            System.out.println("Input Pokemon stat");
+
+            attack = myScan.nextInt();
+
+        }
+
+        tempPokemon.attackLevel = attack;
+
+        int def = myScan.nextInt();
+
+        while (def >= MAX_HIT_POINTS - attack || attack < 1) {
+
+            System.out.println("Input Pokemon stat");
+
+            attack = myScan.nextInt();
+
+        }
+
+        tempPokemon.defenseLevel = def;
+
+        int hp = myScan.nextInt();
+
+        while (hp >= MAX_HIT_POINTS || attack < 1) {
+
+            System.out.println("Input Pokemon stat");
+
+            attack = myScan.nextInt();
+
+        }
+
+        tempPokemon.hitPoints = hp;
+
+
+
+
         return tempPokemon;
     }
 
